@@ -24,7 +24,7 @@ mvn clean package
 %install
 mkdir -p %{buildroot}/usr/share/%{name}
 mkdir -p %{buildroot}/etc/%{name}
-install -D -m 644 src/main/resources/config.json %{buildroot}/etc/%{name}/config.json
+install -D -m 644 configProducer.yml %{buildroot}/etc/%{name}/config.json
 install -D -m 644 target/synthetic-producer-*-selfcontained.jar %{buildroot}/usr/share/%{name}
 
 %clean
